@@ -1,4 +1,4 @@
-# React_v2
+# react-small-projects
 
 Ce repo contient une collection de petits projets React.
 L'objectif est de montrer la maitrise de plusieurs notions fondamentales de React a travers des exercices concrets.
@@ -22,16 +22,18 @@ Voir les details dans [01-twitter-card/README.md](01-twitter-card/README.md).
 
 ### 2) 02-tic-tac-toe
 
-Jeu de morpion (tic-tac-toe) avec logique de victoire et reset.
+Jeu de morpion (tic-tac-toe) avec logique de victoire, sauvegarde de la partie et reset.
 
 Notions React mises en place:
 
 - Gestion de plusieurs etats avec `useState`
+- Sauvegarde de l'état avec `localStorage`
+- Effets de bord éventuels avec `useEffect`
 - Mise a jour immutable d'un tableau d'etat
-- Composants reutilisables (`Square`)
+- Composants reutilisables par dossiers (`components/Square`, `components/WinnerModal`)
 - Flux de donnees parent -> enfant via props
 - Rendu conditionnel (vainqueur, egalite)
-- Logique metier isolee dans des fonctions pures (`checkWinner`, `checkEndGame`)
+- Logique metier et de stockage isolee (`logic/board.js`, `logic/storage.js`)
 
 Voir les details dans [02-tic-tac-toe/README.md](02-tic-tac-toe/README.md).
 

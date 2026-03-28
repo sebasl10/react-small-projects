@@ -39,3 +39,6 @@ lerna-debug.log*
 # Local AI tooling metadata
 .agents/
 skills-lock.json
+
+# Package manager files
+package-lock.json
