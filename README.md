@@ -37,6 +37,19 @@ Notions React mises en place:
 
 Voir les details dans [02-tic-tac-toe/README.md](02-tic-tac-toe/README.md).
 
+### 3) 03-mouse-follower
+
+Petit effet visuel qui permet à un cercle de suivre le curseur de la souris à l'écran, avec possibilité de l'activer/désactiver.
+
+Notions React mises en place:
+
+- `useEffect` pour s'abonner et se désabonner à des événements du navigateur (`pointermove`)
+- Fonction de nettoyage (cleanup function) dans le `useEffect` pour éviter les fuites de mémoire
+- Modification du DOM et styles dynamiques en fonction du state
+- Dépendances du `useEffect` pour réagir aux changements (`[enabled]`)
+
+Voir les details dans [03-mouse-follower/README.md](03-mouse-follower/README.md).
+
 ## Lancer les projets en local
 
 Chaque projet est autonome (Vite + React).
