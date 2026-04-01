@@ -50,6 +50,20 @@ Notions React mises en place:
 
 Voir les details dans [03-mouse-follower/README.md](03-mouse-follower/README.md).
 
+### 4) 04-cat-facts
+
+Petite application qui récupère un fait aléatoire sur les chats et affiche une image de chat avec le premier mot de ce fait.
+
+Notions React mises en place:
+
+- `fetch` API pour faire des requêtes HTTP
+- `useEffect` pour gérer les effets de bord (appels HTTP) au chargement
+- Enchaînement d'effets (un `useEffect` qui dépend d'un autre état)
+- Rendu conditionnel des données asynchrones (`{fact && ...}`)
+- Synchronisation entre l'état (`fact`) et le fetching d'une nouvelle ressource (l'image du chat)
+
+Voir les details dans [04-cat-facts/README.md](04-cat-facts/README.md).
+
 ## Lancer les projets en local
 
 Chaque projet est autonome (Vite + React).

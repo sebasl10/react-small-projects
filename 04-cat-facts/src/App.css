@@ -1,0 +1,145 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: -5%;
+  width: 110%;
+  height: 30%;
+  background-color: var(--accent);
+  z-index: -1;
+  transform: rotate(-2deg);
+  opacity: 0.3;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.fact-text {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+  max-width: 600px;
+  color: var(--text);
+}
+
+.fact-text::before {
+  content: "“";
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 0;
+  vertical-align: bottom;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+.cat-image-wrapper {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  border: 3px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--border-color);
+}
+
+.cat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .cat-image {
+  transform: scale(1.05);
+}
+
+.btn-fetch {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: 3px solid var(--border-color);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px 0px var(--border-color);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.btn-fetch:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--border-color);
+}
+
+.btn-fetch:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px var(--border-color);
+}
+
+.btn-fetch:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px var(--border-color);
+}
+
+/* Subtle corner decorations for the brutalist feel */
+.card-decoration {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--accent);
+  opacity: 0.3;
+}
+
+.dc-tl { top: 1rem; left: 1rem; border-right: none; border-bottom: none; }
+.dc-tr { top: 1rem; right: 1rem; border-left: none; border-bottom: none; }
+.dc-bl { bottom: 1rem; left: 1rem; border-right: none; border-top: none; }
+.dc-br { bottom: 1rem; right: 1rem; border-left: none; border-top: none; }
+
