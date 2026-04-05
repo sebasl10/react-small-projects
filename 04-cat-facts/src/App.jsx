@@ -1,29 +1,10 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-
-const ENDPOINT_RANDOM_FACT = "https://catfact.ninja/fact";
-const ENDPOINT_CAT_IMAGE = "https://cataas.com/cat/says/";
+import { useCatFact } from "./hooks/useCatFact.js";
+import { useCatImage } from "./hooks/useCatImage.js";
 
 function App() {
-  const [fact, setFact] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-
-  useEffect(() => {
-    fetch(ENDPOINT_RANDOM_FACT)
-      .then((res) => res.json())
-      .then((data) => {
-        setFact(data.fact);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (fact) {
-      const firstWord = fact.split(" ")[0];
-      fetch(`${ENDPOINT_CAT_IMAGE}${firstWord}`).then((res) =>
-        setImageUrl(res.url),
-      );
-    }
-  }, [fact]);
+  const { fact, refreshFact } = useCatFact();
+  const { imageUrl } = useCatImage({ fact });
 
   return (
     <main className="app-container">
@@ -40,6 +21,9 @@ function App() {
           </div>
         )}
       </section>
+      <button className="btn-fetch" onClick={refreshFact}>
+        Get new fact
+      </button>
     </main>
   );
 }
