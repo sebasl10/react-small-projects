@@ -56,11 +56,11 @@ Petite application qui récupère un fait aléatoire sur les chats et affiche un
 
 Notions React mises en place:
 
-- `fetch` API pour faire des requêtes HTTP
+- `fetch` API pour faire des requêtes HTTP (séparé en `services`)
 - `useEffect` pour gérer les effets de bord (appels HTTP) au chargement
-- Enchaînement d'effets (un `useEffect` qui dépend d'un autre état)
+- Création de **Custom Hooks** (`useCatFact`, `useCatImage`) pour séparer la logique métier de l'interface
 - Rendu conditionnel des données asynchrones (`{fact && ...}`)
-- Synchronisation entre l'état (`fact`) et le fetching d'une nouvelle ressource (l'image du chat)
+- Tests End-to-End (E2E) implémentés avec **Playwright**
 
 Voir les details dans [04-cat-facts/README.md](04-cat-facts/README.md).
 
